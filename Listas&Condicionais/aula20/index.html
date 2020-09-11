@@ -1,0 +1,21 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<div id="app">
+
+   <ul>
+       <li v-for="(tech, i) in tecnologias" :key="tech">{{tech}} - {{i}}</li>
+   </ul>
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return{
+                tecnologias:['JS', 'PHP', 'VUEJS']
+            }
+        },
+    })
+</script>

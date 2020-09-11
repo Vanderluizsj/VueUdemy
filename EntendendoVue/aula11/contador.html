@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+<div id="app">
+    <h1>Contador</h1>
+    <button class="btn btn-danger" v-on:click="diminuir">-</button>
+    <span>{{numero}}</span>
+    <button class="btn btn-primary" v-on:click="somar(2)">+</button>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+                numero:0
+            }
+        },
+        methods:{
+            somar(valorSoma){
+                this.numero+=valorSoma;
+            },
+            diminuir(){
+                this.numero-=1;
+            }
+        }
+    })
+</script>

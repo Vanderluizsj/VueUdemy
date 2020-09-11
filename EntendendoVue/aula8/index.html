@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+<div id="app">
+    <h1>Primeiro App</h1>
+    <p>Bem vindo  {{nome}}</p>
+
+    <p>Usuario: {{nome}}</p>
+    <button v-on:click="entrar" type="button" class="btn btn-outline-primary">Entrar</button>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return{
+                nome:'Luiz',
+                
+            }                        
+        },
+        methods:{
+            entrar(){
+                this.nome='sujeito programador';
+            }
+        }
+
+    })
+</script>

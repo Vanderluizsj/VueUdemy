@@ -1,0 +1,26 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<div id="app">
+    <h1>Primeiro App</h1>
+    <p>Usuario: {{nome}} </p>
+    <button v-on:click="entrar(5)">Entrar</button>
+    <button v-on:click.once="entrar(5)">Numero 5 Once</button>
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data(){
+            return{
+                nome: 'Matheus',
+            }
+        },
+        methods:{
+            entrar(numero){
+                this.nome += numero;
+            }
+        }
+    })
+</script>
